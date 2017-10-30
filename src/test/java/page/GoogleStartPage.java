@@ -35,7 +35,7 @@ public class GoogleStartPage {
     public boolean isScrollAvailable(WebDriver webDriver){
         JavascriptExecutor jsExecutor = (JavascriptExecutor) webDriver;
         return Boolean.valueOf(jsExecutor.
-                executeScript("return (document.body.clientHeight != document.documentElement.clientHeight)").
+                executeScript("return (document.body.offsetHeight > window.innerHeight)").
                 toString());
     }
 }

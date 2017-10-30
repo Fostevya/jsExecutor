@@ -36,6 +36,7 @@ public class ExecutorTest {
             e.printStackTrace();
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
         driver.get(url);
     }
